@@ -51,6 +51,7 @@ const App = () => {
             <Text style={[styles.taskTitle, item.status && styles.done]}>
               {item.title}
             </Text>
+            <Text style={styles.label}>{item.status ? 'Done' : 'Due'}</Text>
             <Switch
               value={item.status}
               thumbColor={item.status ? '#000' : 'grey'}
@@ -100,6 +101,9 @@ const styles = StyleSheet.create({
   taskTitle: {
     fontSize: 18,
     flex: 1,
+  },
+  label:{
+    color:'grey'
   },
   done: {
     color: 'grey',
